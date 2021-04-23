@@ -5,9 +5,18 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="{{url_for('static',filename='css/main.css')}}">
+    <link rel="shortcut icon" href="{{url_for('static',filename='images/favicon.ico')}}" type="image/x-icon">
     <title>flask-projects</title>
 </head>
 <body>
-    <h1>flask-projects</h1>
+    <ul>
+        <li><a class="active" href="{{ url_for('home') }}">Home</a></li>
+        <li><a href="{{ url_for('temperature_converter') }}">Temperature</a></li>
+    </ul>
+    {% block content %}
+        <h1 id="cntr">flask-projects</h1>
+        <h2 id="cntr">This is a Flask project</h2>
+            
+    {% endblock %}    
 </body>
 </html>
