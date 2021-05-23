@@ -4,8 +4,95 @@
 <h1 style="text-align: center;">Temperature Converter</h1>
 
 <div class="card2">
-    <h3>Celcius: </h3><input type="text" id="celsius" style="size: 30px;">
-    <h3>Fahrenheit: </h3><input type="text" id="fahrenheit" style="size: 30px;">
+    <h3>Celcius: </h3><input type="text" id="celsius" style="size: 30px;" onchange="change_temp_toF()">
+    <h3>Fahrenheit: </h3><input type="text" id="fahrenheit" style="size: 30px;" onchange="change_temp_toC()">
+    <input type="button" value="Convert">
+</div>
+<br>
+<div class="table">
+    <table>
+        <caption>Common Temperatures in Fahrenheit and Celsius</caption>
+        <tr>
+            <th>°C</th>
+            <th>°F</th>
+            <th style="text-align: left;">Description</th>
+        </tr>
+        <tr>
+            <td>-40</td>
+            <td>-40</td>
+            <td>This is where Celsius equals Fahrenheit. It's the temperature of an extremely cold day.</td>
+        </tr>
+        <tr>
+            <td>-18</td>
+            <td>0</td>
+            <td>An average cold winter day.</td>
+        </tr>
+        <tr>
+            <td>0</td>
+            <td>32</td>
+            <td>The freezing point of water.</td>
+        </tr>
+        <tr>
+            <td>10</td>
+            <td>50</td>
+            <td>A cool day.</td>
+        </tr>
+        <tr>
+            <td>21</td>
+            <td>70</td>
+            <td>A typical room temperature.</td>
+        </tr>
+        <tr>
+            <td>30</td>
+            <td>86</td>
+            <td>A hot day.</td>
+        </tr>
+        <tr>
+            <td>37</td>
+            <td>98.6</td>
+            <td>Body temperature.</td>
+        </tr>
+        <tr>
+            <td>40</td>
+            <td>104</td>
+            <td>Bath water temperature.</td>
+        </tr>
+        <tr>
+            <td>100</td>
+            <td>212</td>
+            <td>Boiling point of water at sea level.</td>
+        </tr>
+        <tr>
+            <td>180</td>
+            <td>356</td>
+            <td>Baking temperature in an oven.</td>
+        </tr>
+    </table>
+    <h4>Bold temperatures are exact values. Other temperatures are close but rounded to the nearest degree.</h4>
 </div>
 
 {% endblock %}
+{% block script%}
+<script>
+    function change_temp_toF(){
+        let celsius = document.getElementById('celsius').value;
+        if(celsius != ''){
+            let fahrenheit = (celsius * 9/5) + 32
+            document.getElementById('fahrenheit').value = fahrenheit;
+        }else{
+            document.getElementById('fahrenheit').value = '';
+        }
+    }
+    function change_temp_toC(){
+        let fahrenheit = document.getElementById('fahrenheit').value;
+        if(fahrenheit != ''){
+            let celsius = (fahrenheit - 32) * 5/9
+            document.getElementById('celsius').value = celsius;
+        }else{
+            document.getElementById('celsius').value = '';
+        }
+    }
+</script>
+
+{% endblock %}
+

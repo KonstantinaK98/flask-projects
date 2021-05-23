@@ -46,7 +46,26 @@ li a.active {
     border-radius: 10px;
 }
 
+.table {
+    margin-bottom:25px;
+    width: 500px;
+    height: 500px;
+    padding-left: 80px;
+    padding-bottom:10px;
+    padding-top: 20px;
+    padding-right: 70px;
+    margin: auto;
+}
+
 #cntr {
     text-align: center;
 }
 
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+th, td {
+    padding: 8px;
+    text-align: left;
+}
