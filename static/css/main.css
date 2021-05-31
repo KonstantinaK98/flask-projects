@@ -1,5 +1,5 @@
 body {
-    background-color: #ffffff;
+    background-color: #d9e8eb;
 }
 
 ul {
@@ -17,10 +17,11 @@ li {
   
 li a {
     display: block;
-    color: #666;
+    color: #667;
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
+    font-size: large;
 }
   
 li a:hover:not(.active) {
@@ -68,4 +69,70 @@ table, th, td {
 th, td {
     padding: 8px;
     text-align: left;
+}
+
+.mybtn {
+    display: inline-block;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    color: white;
+    background-color: #298bb3;
+    border-radius: 6px;
+    outline: none;
+    cursor: pointer;
+    font-size: large;
+  }
+
+  .myfrm{
+      display:grid;
+      justify-content: center;
+      align-items: center;
+  }
+
+  .myfrm button {
+      margin-top: 10px;
+      width: 250px;
+      height: 60px;
+  }
+
+  .mybtn:hover{
+      background-color: #43add6;
+  }
+
+  .myfrm .url_button {
+    width: 120px;
+    height: 40px;
+    color: white;
+    background-color: #298bb3;
+    text-decoration: none;
+    border-radius: 6px;
+    outline: none;
+    cursor: pointer;
+    font-size: large;
+  }
+
+  .myfrm .url_button:hover{
+    background-color: #43add6;
+}
+
+input {
+    height: 20px;
+}
+
+.temp_button {
+    width: 90px;
+    height: 40px;
+    color: white;
+    background-color: #298bb3;
+    text-decoration: none;
+    border-radius: 6px;
+    outline: none;
+    cursor: pointer;
+    font-size: large;
+    margin-top: 5px;
+}
+
+.temp_button:hover{
+    background-color: #43add6;
 }

@@ -12,10 +12,15 @@
     <ul>
         <li><a class="active" href="{{ url_for('home') }}">Home</a></li>
         <li><a href="{{ url_for('temperature_converter') }}">Temperature</a></li>
+        <li><a href="{{ url_for('urlshortener') }}">Url Shortener</a></li>
     </ul>
     {% block content %}
         <h1 id="cntr">flask-projects</h1>
-        <h2 id="cntr">This is a Flask project</h2>
+        <form class="myfrm" action="" method="POST">
+            <button class="mybtn" type="submit" name="submit_button" value="Temperature">Temperature</button>
+            <button class="mybtn" type="submit" name="submit_button" value="Url Shortener">Url Shortener</button>
+        </form>
+        
             
     {% endblock %}    
 </body>
