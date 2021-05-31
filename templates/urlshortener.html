@@ -2,11 +2,15 @@
 {% block content %}
 <h1 style="text-align: center;">Url Shortener</h1>
 <form class="myfrm" action="" method="POST">
-    <h2>Enter a url to make it shorter</h2>
+    <h2>Enter a URL to make it shorter</h2>
     <input type="text" name="url" placeholder="https://example.com">
     <button class="url_button" type="submit" name="url_button">Convert</button>
 </form>
 
-<h3 id="url_short"></h3>
-
+{% if short %}
+    <div id="url_short">
+        <h2 id="url_short">The Short URL</h2>
+        <h3>{{short}}</h3>
+    </div>    
+{% endif %}
 {% endblock %}

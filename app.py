@@ -1,4 +1,5 @@
 from flask import Flask, render_template, request
+import pyshorteners
 app = Flask(__name__)
 
 @app.route('/', methods=['POST','GET'])
@@ -19,7 +20,11 @@ def temperature_converter():
 def urlshortener():
    if request.method == "POST":
       if request.form['url'] != '':
-         return
+         try:
+            short = pyshorteners.Shortener().tinyurl.short(request.form['url'])
+            return render_template('urlshortener.html', short=short)
+         except:
+            return render_template('urlshortener.html')   
       else:
          return render_template('urlshortener.html')  
    else:       

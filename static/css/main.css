@@ -136,3 +136,10 @@ input {
 .temp_button:hover{
     background-color: #43add6;
 }
+
+#url_short {
+    display:grid;
+    justify-content: center;
+    align-items: center;
+    margin-top: 40px;
+}
