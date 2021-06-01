@@ -49,8 +49,9 @@ li a.active {
 
 .table {
     margin-bottom:25px;
-    width: 500px;
-    height: 500px;
+    display:grid;
+    justify-content: center;
+    align-items: center;
     padding-left: 80px;
     padding-bottom:10px;
     padding-top: 20px;
